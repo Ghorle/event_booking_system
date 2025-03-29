@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.7.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
@@ -15,7 +15,7 @@ gem 'puma', '~> 3.11'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'ffi', '< 1.17'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -27,6 +27,23 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
+
+# For authentication
+gem 'bcrypt'             
+# User authentication
+gem 'devise'        
+gem 'devise-jwt'
+gem 'devise_token_auth'     
+# Authorization
+gem 'pundit'             
+# Background job processing
+gem 'sidekiq'            
+# Required for Sidekiq
+gem 'redis'              
+# For JSON serialization
+gem 'active_model_serializers' 
+# PostgreSQL database adapter
+gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Event Booking System (API)
 
-Things you may want to cover:
+## Setup Instructions
 
-* Ruby version
+1. Clone the repository
+   git clone <repo_url>
+   cd event_booking_system
+   
+2. Install dependencies
+   bundle install
 
-* System dependencies
+3. Setup the database
+    rails db:create db:migrate
 
-* Configuration
+4. Start the server
+    rails server
 
-* Database creation
+5. Run Sidekiq for background jobs
+    sidekiq
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6. API Endpoints
+    User Authentication: POST /users/sign_in
+    List Events: GET /events
+    Create Event (Organizer only): POST /events
+    Update Event (Organizer only): PATCH /events/:id
+    Book Ticket (Customer only): POST /bookings
