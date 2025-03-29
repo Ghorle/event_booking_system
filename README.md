@@ -8,20 +8,20 @@
    git clone <repo_url>
    cd event_booking_system
    
-2. Install dependencies
+3. Install dependencies
    bundle install
 
-3. Setup the database
+4. Setup the database
     rails db:create db:migrate
 
-4. Start the server
+5. Start the server
     rails server
 
-5. Run Sidekiq for background jobs
+6. Run Sidekiq for background jobs
     sidekiq
 
 
-6. API Endpoints
+7. API Endpoints
     User Authentication: POST /users/sign_in
     List Events: GET /events
     Create Event (Organizer only): POST /events
